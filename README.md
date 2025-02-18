@@ -1,4 +1,5 @@
 # mcp-server-opensearch: An OpenSearch MCP Server
+[![smithery badge](https://smithery.ai/badge/@ibrooksSDX/mcp-server-opensearch)](https://smithery.ai/server/@ibrooksSDX/mcp-server-opensearch)
 
 > The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that enables seamless integration between LLM applications and external data sources and tools. Whether you’re building an AI-powered IDE, enhancing a chat interface, or creating custom AI workflows, MCP provides a standardized way to connect LLMs with the context they need.
 
@@ -35,6 +36,14 @@ It acts as a semantic memory layer on top of the OpenSearch database.
    - Returns: Confirmation message
 
 ## Installation
+
+### Installing via Smithery
+
+To install mcp-server-opensearch for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@ibrooksSDX/mcp-server-opensearch):
+
+```bash
+npx -y @smithery/cli install @ibrooksSDX/mcp-server-opensearch --client claude
+```
 
 ### Using uv (recommended)
 

@@ -1,0 +1,25 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - opensearchUrl
+      - opensearchHostPort
+      - indexName
+    properties:
+      opensearchUrl:
+        type: string
+        description: The URL of the OpenSearch server.
+      opensearchHostPort:
+        type: number
+        description: The port of the host of the OpenSearch server.
+      indexName:
+        type: string
+        description: The name of the index to use.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    config => ({command: 'uv', args: ['run', 'mcp-server-opensearch', '--opensearch-url', `${config.opensearchUrl}:${config.opensearchHostPort}`, '--index-name', config.indexName]})
